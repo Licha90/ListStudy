@@ -5,11 +5,11 @@ public class TestHashSet {
 
     public static void main(String[] args) {
 
-        Person p1 = new Person("猴子");
+//        Person p1 = new Person("猴子");
+//
+//        Person p2 = new Person("猴子");
 
-        Person p2 = new Person("猴子");
-
-        System.out.println(p1.equals(p2));
+//        System.out.println(p1.equals(p2));
 
         HashSet<String> stringHashSet = new HashSet<>();
         stringHashSet.add(new String("猴子"));
@@ -23,12 +23,18 @@ public class TestHashSet {
 
         HashSet<Person> personSet = new HashSet<Person>();
 
-        personSet.add(new Person("猴子"));
-        personSet.add(new Person("猴子"));
-        personSet.add(new Person("猴子"));
-        personSet.add(new Person("猴子"));
-        personSet.add(new Person("猴子"));
+        personSet.add(new Person("猴子1",1));
+        personSet.add(new Person("猴子2",2));
+        personSet.add(new Person("猴子3",3));
+        personSet.add(new Person("猴子4",4));
+        personSet.add(new Person("猴子5",5));
         System.out.println("Person 集合的size " + personSet.size());//5
+
+        System.out.println(personSet);
+
+//        System.out.println(personSet.iterator().next().getTestNumber());
+        //获取personSet的第一个数字
+        //set集合 发现重复的元素就会拒绝存入  他只会存储重复元素中的第一个
 
 
 

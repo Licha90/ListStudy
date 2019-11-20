@@ -2,9 +2,13 @@ public class Person {
 
     private String name;
 
-    public Person(String name){
+    private int testNumber;
+
+    public Person(String name, int testNumber){
 
         this.name = name;
+
+        this.testNumber = testNumber;
     }
 
     //重写equals方法  将Person放入set集合中去 去掉重复
@@ -30,6 +34,19 @@ public class Person {
         return false;
     }
 
+    //重写toString 方法 让对象打印输出的时候直接输出对象的属性 而不是hashCode码
+    public String toString(){
+
+        StringBuilder builder = new StringBuilder("{");
+
+        builder.append(this.name);
+        builder.append(",");
+        builder.append(this.testNumber);
+        builder.append("}");
+
+        return new String(builder);
+    }
+
 
     //重写hasCode方法
     public int hashCode(){
@@ -41,5 +58,10 @@ public class Person {
     public String getName(){
 
         return this.name;
+    }
+
+    public int getTestNumber(){
+
+        return this.testNumber;
     }
 }
