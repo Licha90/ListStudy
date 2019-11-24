@@ -1,14 +1,14 @@
-public class Person {
+public class Person implements Comparable<Person>{
 
     private String name;
-
     private int testNumber;
+    private int age;
 
-    public Person(String name, int testNumber){
+    public Person(String name, int testNumber, int age){
 
         this.name = name;
-
         this.testNumber = testNumber;
+        this.age = age;
     }
 
     //重写equals方法  将Person放入set集合中去 去掉重复
@@ -63,5 +63,18 @@ public class Person {
     public int getTestNumber(){
 
         return this.testNumber;
+    }
+
+    //如果想让Person对象存入TreeSet里面 那么就要Person实现CompareTo方法的接口 重写这个方法
+    @Override
+    public int compareTo(Person o) {
+
+        int value = this.name.compareTo(o.name);
+        if (value != 0){
+
+            return value;
+        }
+        return this.age - o.age;
+        //当前对象的name和另一个对象的name对比的结果
     }
 }

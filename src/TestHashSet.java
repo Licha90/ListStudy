@@ -23,11 +23,11 @@ public class TestHashSet {
 
         HashSet<Person> personSet = new HashSet<Person>();
 
-        personSet.add(new Person("猴子1",1));
-        personSet.add(new Person("猴子2",2));
-        personSet.add(new Person("猴子3",3));
-        personSet.add(new Person("猴子4",4));
-        personSet.add(new Person("猴子5",5));
+        personSet.add(new Person("猴子1",1,1));
+        personSet.add(new Person("猴子2",2,2));
+        personSet.add(new Person("猴子3",3,3));
+        personSet.add(new Person("猴子4",4,4));
+        personSet.add(new Person("猴子5",5,5));
         System.out.println("Person 集合的size " + personSet.size());//5
 
         System.out.println(personSet);
